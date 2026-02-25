@@ -30,7 +30,11 @@ Este repositório contém a solução técnica para o desafio de Cientista de Da
 
 ### 0. Inserindo o dataset
 
-Crie a pasta data/ e insira o dataset sample_data.parquet 
+Crie a pasta data
+
+     mkdir data
+
+e insira o dataset sample_data.parquet 
 
 ### 1. Clone o repositório e acesse a pasta:
 
