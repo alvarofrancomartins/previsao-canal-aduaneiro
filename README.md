@@ -10,7 +10,7 @@ Este repositório contém a solução técnica para o desafio de Cientista de Da
 
     eval_plots/ - Gráficos gerados pelo script de avaliação (Matrizes de Confusão, Gini Importance, Permutation Importance).
 
-    Previsão de Canal Aduaneiro.ipynb - Jupyter Notebook contendo toda a Análise Exploratória de Dados (EDA) e análises estatísticas.
+    EDA.ipynb - Jupyter Notebook contendo toda a Análise Exploratória de Dados (EDA) e análises estatísticas.
 
     EDA_figs/ - Gráficos gerados durante a EDA.
 
