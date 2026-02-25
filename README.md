@@ -35,7 +35,7 @@ Este repositório contém a solução técnica para o desafio de Cientista de Da
 
 ### 2. Crie um ambiente virtual e instale as dependências:
 
-Requer Python >= 3.9
+Requer Python >= 3.11
 
     python3 -m venv venv
     source venv/bin/activate
@@ -46,13 +46,13 @@ Requer Python >= 3.9
 
     python main_pipeline.py
 
-    Isso irá treinar os 3 modelos (Random Forest, HistGradientBoosting, XGBoost) e salvar os artefatos .pkl na pasta models/.
+Isso irá treinar os 3 modelos (Random Forest, HistGradientBoosting, XGBoost) e salvar os artefatos .pkl na pasta models/.
 
 ### 4. Gere os Gráficos de Avaliação:
 
     python evaluation_metrics.py
 
-    Isso irá gerar as Matrizes de Confusão, Gini Importance e Permutation Importance na pasta eval_plots/.
+Isso irá gerar as Matrizes de Confusão, Gini Importance e Permutation Importance na pasta eval_plots/.
 
 ### 5. Rode os Testes Unitários:
 
