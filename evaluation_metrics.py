@@ -9,17 +9,22 @@ Gera:
 Pré-requisito: executar main_pipeline.py primeiro para gerar os artefatos em models/.
 """
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+import os
 import joblib
 import logging
-import os
+import warnings
 
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import pandas            as pd
+import numpy             as np
+import matplotlib.pyplot as plt
+import seaborn           as sns
+
+from sklearn.metrics    import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.inspection import permutation_importance
 
+warnings.filterwarnings('ignore')
+
+# Configuração de Logging 
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
