@@ -35,8 +35,11 @@ Este repositório contém a solução técnica para o desafio de Cientista de Da
 
 ### 2. Crie um ambiente virtual e instale as dependências:
 
-    python -m venv venv
-    source venv/bin/activate  
+Requer Python >= 3.9
+
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install --upgrade pip
     pip install -r requirements.txt
 
 ### 3. Execute o Pipeline Principal (Treinamento e Avaliação):
