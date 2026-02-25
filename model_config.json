@@ -1,0 +1,30 @@
+{
+  "random_forest": {
+    "max_depth": 10,
+    "min_samples_leaf": 30,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "hist_gradient_boosting": {
+    "max_depth": 10,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.5,
+    "random_state": 42
+  },
+  "xgboost": {
+    "learning_rate": 0.05,
+    "max_depth": 10,
+    "min_child_weight": 10,
+    "n_estimators": 300,
+    "reg_lambda": 1,
+    "eval_metric": "mlogloss",
+    "random_state": 42
+  },
+  "oversampling": {
+    "method": "RandomOverSampler",
+    "random_state": 42
+  },
+  "temporal_split": {
+    "cutoff_test": "2024-11-01"
+  }
+}
