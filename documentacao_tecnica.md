@@ -57,9 +57,11 @@ Difícil dizer porque mais de 95% das empresas nesse dataset são da classe DEMA
 
 Separei os dados entre treino (2023-01-01 → 2024-10-31 (22 meses)) e teste (2024-11-01 → 2025-01-31 (3 meses))
 
-Para extrair mais informações dos dados, criei features como ano, mes, dia_semana e trimestre). Além disso, também criei features de agregação histórica (lag features) calculadas exclusivamente no conjunto de treino: `taxa_risco_pais`, `taxa_risco_ncm`, `taxa_risco_ncm_code`, `taxa_risco_clearance_entry`, `taxa_risco_clearance_dispatch`, `taxa_risco_clearance_place` e `volume_dis_pais`. Cada uma codifica a proporção histórica de DIs em canais de risco (Vermelho, Amarelo ou Cinza) para uma dada categoria, funcionando como um target encoding seguro contra leakage temporal. Valores não vistos no treino recebem fallback na taxa global de risco (o fallback é a taxa global de risco do treino, impedindo data leakage).
+Para extrair mais informações dos dados, criei features como ano, mes, dia_semana e trimestre). Além disso, criei features de agregação histórica (lag features) calculadas exclusivamente no conjunto de treino: `taxa_risco_pais`, `taxa_risco_ncm`, `taxa_risco_ncm_code`, `taxa_risco_clearance_entry`, `taxa_risco_clearance_dispatch`, `taxa_risco_clearance_place` e `volume_dis_pais`. Cada uma codifica a proporção histórica de DIs em canais de risco (Vermelho, Amarelo ou Cinza) para uma dada categoria, funcionando como um target encoding seguro contra leakage temporal. Valores não vistos no treino recebem fallback na taxa global de risco (o fallback é a taxa global de risco do treino, impedindo data leakage).
 
 Busquei insumos adicionais pesquisando pelo NCM na internet e criei a feature `ncm_grau_elaboracao`, que extrai os dois primeiros dígitos do código NCM — o Capítulo do produto na Nomenclatura Comum do Mercosul. Esses capítulos refletem o grau de elaboração industrial da mercadoria: capítulos mais baixos correspondem a matérias-primas (animais vivos, produtos agrícolas), enquanto capítulos mais altos correspondem a produtos manufaturados (máquinas, veículos, eletrônicos). 
+
+Outra tranformação foi a criação de variáveis a partir do tipo do consignee e shipper (usei regex para ver se o nome contém INTERNATIONAL, TRADING, COMERCIAL, ETC...). E fiz algo semelhante para os tipos de clearance (mas aqui é se é PORTO ou AEROPORTO). 
 
 5. Qual modelo apresentou melhor desempenho?
 
