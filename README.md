@@ -28,18 +28,18 @@ Este repositório contém a solução técnica para o desafio de Cientista de Da
 
 ## Execute o projeto:
 
-### 0. Inserindo o dataset
+### 0. Clone o repositório e acesse a pasta:
+
+    git clone https://github.com/alvarofrancomartins/previsao-canal-aduaneiro.git
+    cd previsao-canal-aduaneiro
+
+### 1. Inserindo o dataset
 
 Crie a pasta data
 
      mkdir data
 
 e insira o dataset sample_data.parquet 
-
-### 1. Clone o repositório e acesse a pasta:
-
-    git clone <url-do-seu-repositorio>
-    cd <nome-da-pasta>
 
 ### 2. Crie um ambiente virtual e instale as dependências:
 
