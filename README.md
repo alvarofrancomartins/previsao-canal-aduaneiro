@@ -39,7 +39,7 @@ Este repositório contém a solução técnica para o desafio de Cientista de Da
     source venv/bin/activate  
     pip install -r requirements.txt
 
-### 3. Execute o Pipeline de Treinamento:
+### 3. Execute o Pipeline Principal (Treinamento e Avaliação):
 
     python main_pipeline.py
 
